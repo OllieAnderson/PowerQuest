@@ -1,4 +1,10 @@
 
+const math = require('./locations/export.cjs');
+const math = require('./export.cjs');
+
+console.log(math.subtract(5, 2));  // 3
+
+
 // Import the built-in 'readline' module, which allows reading user input from the console
 
 const readline = require('readline');
@@ -30,7 +36,12 @@ async function startGame() {
 
 
   // Ask the first question and wait for the user's response
-  let firstChoice = await ask("Do you go to the 'door' or 'desk'? ");
+  let firstChoice = await ask("Do you open the 'door' or go to the 'desk'? ");
+
+
+  // if (firstChoice.toLowerCase() == "exit") {
+  //   rl.close();
+  // }
 
 
   // Check the user's first choice
@@ -39,7 +50,7 @@ async function startGame() {
 
     // If the user goes door, describe the scenario
 
-    console.log("\nYou go to the door.");
+    // console.log("\nYou go to the door.");
 
 
     // Ask what the user wants to do next
@@ -108,6 +119,8 @@ async function startGame() {
     // If the input doesn't match any known command
 
     console.log("\nStart again.");
+    // startGame();
+
   }
 
   // Close the readline interface when the game ends

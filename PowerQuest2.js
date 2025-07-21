@@ -1,8 +1,19 @@
 
+// import locations from location folder
+
+// const bed = require('./locations/bed.cjs');
+
+// console.log(bed.bed());  // 1
+
+
+
+
+
+
+
 // Import the built-in 'readline' module, which allows reading user input from the console
 
 const readline = require('readline');
-
 
 // Create an interface to interact with the user via the command line
 
@@ -20,9 +31,92 @@ function ask(question) {
 }
 
 
-// This is the main function where the game logic happens
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // This is the main function where the game logic happens
 
 async function startGame() {
+
+
+
+
+//   async function bed() {
+//   console.log("You are on a bed.")
+//   console.log("Do you: ")
+//   console.log("1. go to desk ")
+//   console.log("2. read a book")
+
+//   let action = await ask("");
+
+
+
+//   // create a switch statement to choose different actions
+
+
+
+//   switch (action) {
+//   case "desk":
+//     console.log("go to desk");
+//     break;
+//   case 2:
+//     console.log("read a book");
+//     break;
+//   case "bed":
+//     console.log("go to bed");
+//     break;
+//   case "yoga mat":
+//     console.log("go to yoga mat");
+//     break;
+//   case "closet":
+//     console.log("go to closet");
+//     break;
+//   case "bookshelf":
+//     console.log("go to bookshelf");
+//     break;
+//   default:
+//     console.log("start again.")
+//   }
+
+//    rl.close();
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   console.log("You are in a room.")
@@ -30,7 +124,11 @@ async function startGame() {
 
   let location = await ask("");
 
-  // await ask("Do you go to the desk, door, bed, yoga mat, closet, bookshelf? ")
+
+
+  // create a switch statement to move between locations
+  // add modules for each location
+
 
 
   switch (location) {
@@ -41,7 +139,8 @@ async function startGame() {
     console.log("go to door");
     break;
   case "bed":
-    console.log("go to bed");
+    console.log("go to bed\n");
+    // bed()
     break;
   case "yoga mat":
     console.log("go to yoga mat");
@@ -57,17 +156,6 @@ async function startGame() {
   }
 
 
-
-
-
-
-
-
-
-
-
-
-  
 
   rl.close();
 }

@@ -6,7 +6,7 @@ const rl = readline.createInterface({
 });
 
 function startGame() {
-  console.log("You are at a desk. There is a computer, a phone, and a notepad.");
+  console.log("\nYou are at a desk. There is a computer, a phone, and a notepad.");
   rl.question("Do you use computer, phone, or notepad? Or do you leave the desk? ", (answer) => {
     switch (answer.toLowerCase()) {
       case "computer":

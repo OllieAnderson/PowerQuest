@@ -106,16 +106,10 @@ function door() {
         }
       });
 
+    }
 
 
 
-
-
-
-
-
-
-}
 
 startGame();
 

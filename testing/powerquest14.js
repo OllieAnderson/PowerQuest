@@ -44,7 +44,7 @@ Exhale gently. Let go of any tension.
 
 Now turn your awareness inward,
 not to thoughts or plans, but to the center of you—
-to the warmth of your stomach, the soft engine that hums below thought.
+to the warmth of your stomach, that hums below thought.
 
 You have eaten.
 You have been given to.
@@ -54,20 +54,16 @@ There is no need to assist, only to trust.
 Your body knows what to do.
 Muscles contract, enzymes awaken, cells drink in the broken-down gifts.
 
-This is alchemy.
-Transformation without spectacle.
-Effort without drama.
-
 Let your mind rest in that rhythm.
-Let your breath mirror the calm efficiency of digestion.
+Let your breath mirror the calm of digestion.
 Inhale in.
 Exhale out.
 
 If discomfort arises, greet it with kindness.
-Softly say: I am here.
+Softly say, I am here.
 I am listening.
 
-You are a living system, a slow miracle of absorption and renewal.
+You are slowly absorbing and renewing.
 What you eat becomes part of you—not just flesh, but mood, memory, motion.
 
 Feel the belly now—heavy, light, silent, active—whatever it is,
@@ -78,7 +74,7 @@ Golden, steady, tender.
 Let it flow through your intestines like sunlight through water.
 
 Stay with this quiet for a while.
-Let go of urgency, of needing to *do*.
+Let go of urgency, of needing to do.
 Just digest.
 Just be.
 

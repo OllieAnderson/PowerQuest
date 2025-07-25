@@ -1,91 +1,14 @@
+
+const books = require('./modules/bookshelf/books.cjs');
+
+
+
 const readline = require("readline");
 
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-
-
-
-
-
-prayerPeace = `\n
-A Prayer for Your Peace of Mind
-\n
-May calmness settle in the corners of your thoughts.
-May your heart be light, and your breath untroubled.
-Whatever burdens you carry, may they soften.
-Whatever questions haunt you, may they rest awhile.
-\n
-I wish you the silence that heals,
-the quiet that doesn't ache,
-and the stillness where nothing is missing.
-\n
-May you feel safe inside your own being,
-untouched by the storm outside.
-May you trust that you are enough, just as you are—
-and that you are held, even when alone.
-\n
-Peace to your mind.
-Peace to your day.
-Peace, always, to you.\n\n`
-
-
-meditationDigestion = `\n
-
-A Meditation on Digesting Food
-
-Sit or lie down comfortably.
-Let your hands rest softly on your belly, over the quiet work of your body.
-
-Take a slow breath in through your nose.
-Feel your abdomen rise — not with force, but ease.
-Exhale gently. Let go of any tension.
-
-Now turn your awareness inward,
-not to thoughts or plans, but to the center of you—
-to the warmth of your stomach, that hums below thought.
-
-You have eaten.
-You have been given to.
-Now your body begins its unseen art.
-
-There is no need to assist, only to trust.
-Your body knows what to do.
-Muscles contract, enzymes awaken, cells drink in the broken-down gifts.
-
-Let your mind rest in that rhythm.
-Let your breath mirror the calm of digestion.
-Inhale in.
-Exhale out.
-
-If discomfort arises, greet it with kindness.
-Softly say, I am here.
-I am listening.
-
-You are slowly absorbing and renewing.
-What you eat becomes part of you—not just flesh, but mood, memory, motion.
-
-Feel the belly now—heavy, light, silent, active—whatever it is,
-welcome it.
-
-As you breathe, imagine warmth moving through your core.
-Golden, steady, tender.
-Let it flow through your intestines like sunlight through water.
-
-Stay with this quiet for a while.
-Let go of urgency, of needing to do.
-Just digest.
-Just be.
-
-And when you're ready to move again,
-do so gently.
-Carry with you the knowledge:
-Your body is working, always,
-in your favor.
-
-
-`
 
 
 
@@ -159,6 +82,9 @@ function desk() {
           case "exit":
             rl.close();
             break;
+          case "back":
+            bed()
+            break
           default:
             console.log("Try again.");
             computer();
@@ -183,6 +109,9 @@ function leave() {
       case "yoga mat":
         yogaMat();
         break;
+      case "back":
+        startGame()
+        break
       default:
         console.log("Try again.");
         startGame();
@@ -205,9 +134,11 @@ function leave() {
             break;
           case "sleep":
           case "go to sleep":
-            console.log("You go to your bed and go to sleep");
-            rl.close();
+            sleep()
             break;
+          case "back":
+            leave()
+            break
           default:
             console.log("Try again.");
             bed();
@@ -227,9 +158,12 @@ function leave() {
                 break;
               case "digestion":
                 // console.log("You return to the starting point.");
-                console.log(meditationDigestion)
+                console.log(books.meditationDigestion)
                 rl.question("continue? ", (answer) => {startGame()})
                 break;
+              case "back":
+                bed()
+                break
               default:
                 console.log("Try again.");
                 meditate();
@@ -244,7 +178,7 @@ function leave() {
           rl.question("Which prayer do you do? ", (answer) => {
             switch (answer) {
               case "peace":
-                console.log(prayerPeace);
+                console.log(books.prayerPeace);
                 rl.question("continue? ", (answer) => {startGame()})
                 break;
               case "go back":
@@ -254,6 +188,33 @@ function leave() {
               default:
                 console.log("Try again.");
                 prayer();
+            }
+          });
+        }
+
+
+
+
+        function sleep() {
+          rl.question("Do you want to nap or sleep? ", (answer) => {
+            switch (answer) {
+              case "nap":
+                console.log("have a nap for 15 minutes.");
+                rl.question("continue? ", (answer) => {startGame()})
+                break;
+              case "sleep":
+                console.log(books.sleepRoutine);
+                rl.question("continue? ", (answer) => {startGame()})
+                break;
+              case "back":
+                bed();
+                break;
+              case "exit":
+                rl.close();
+                break;
+              default:
+                console.log("Try again.");
+                sleep();
             }
           });
         }
@@ -315,14 +276,14 @@ function leave() {
 
     function yogaMat() {
       console.log("there is a yoga mat.")
-      rl.question("Do you do 5, 10, or 20 minutes of yoga? ", (answer) => {
+      rl.question("Do you do 5 minutes or supine yoga for 10 minutes? ", (answer) => {
         switch (answer.toLowerCase()) {
           case "5":
             console.log("\nDo 5 minutes of yoga\n\n")
             rl.question("continue? ", (answer) => {startGame()})
             break;
-          case "10":
-            console.log("\nDo 10 minutes of yoga\n\n")
+          case "supine":
+            console.log("\nDo 10 minutes of supine yoga\n\n")
             rl.question("continue? ", (answer) => {startGame()})
             break;
           case "20":

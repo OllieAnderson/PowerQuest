@@ -2,9 +2,14 @@
 
 A Node.js game for organising your life, built with Javascript and node
 
-## Installation
 
+## Installation
 
 git clone https://github.com/OllieAnderson/PowerQuest
 cd ./powerQuest
 npm install
+
+
+## Pull Requests
+
+to be made as modules

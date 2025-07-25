@@ -1,5 +1,4 @@
 
-const books = require('./node_modules/books.cjs');
 
 
 
@@ -14,6 +13,7 @@ const rl = readline.createInterface({
 
 
 function startGame() {
+  console.clear()
   console.log("\nYou are at a desk. There is a computer, a phone, and a notepad.");
   rl.question("\nDo you use the desk or do you leave it? ", (answer) => {
     switch (answer.toLowerCase()) {
@@ -27,6 +27,7 @@ function startGame() {
         rl.close();
         break
       default:
+        console.clear()
         console.log("Try again.");
         startGame();
     }
@@ -38,6 +39,7 @@ function startGame() {
 
 function desk() {
   // console.log("\nYou are at a desk. There is a computer, a phone, and a notepad.");
+  console.clear()
   rl.question("\nDo you use computer, phone, or notepad? ", (answer) => {
     switch (answer.toLowerCase()) {
       case "computer":
@@ -67,6 +69,7 @@ function desk() {
 
     function computer() {
       // console.log("\nYou can use the computer to look at emaillook at todo list.")
+      console.clear()
       rl.question("\nUse the computer to look at email, todolist, or google calendar? ", (answer) => {
         switch (answer.toLowerCase()) {
           case "email":
@@ -102,6 +105,7 @@ function desk() {
 
 
 function leave() {
+  console.clear()
   console.log("There is bed, and a door.");
   rl.question("Do you go bed or door, or yoga mat? ", (answer) => {
     switch (answer.toLowerCase()) {
@@ -129,6 +133,7 @@ function leave() {
 
 
     function bed() {
+      console.clear()
       // console.log("You go to your bed.");
       rl.question("Do you meditate, do a prayer, or go to sleep? ", (answer) => {
         switch (answer.toLowerCase()) {
@@ -156,6 +161,7 @@ function leave() {
 
 
         function meditate() {
+          console.clear()
           rl.question("How long do you mediate for 5 minutes or on digestion? ", (answer) => {
             switch (answer) {
               case "5":
@@ -180,6 +186,7 @@ function leave() {
 
 
         function prayer() {
+          console.clear()
           console.log("There is a prayer for peace")
           rl.question("Which prayer do you do? ", (answer) => {
             switch (answer) {
@@ -202,6 +209,7 @@ function leave() {
 
 
         function sleep() {
+          console.clear()
           rl.question("Do you want to nap or sleep? ", (answer) => {
             switch (answer) {
               case "nap":
@@ -229,6 +237,7 @@ function leave() {
 
 
     function door() {
+      console.clear()
       console.log("there is a bathroom, kitchen.")
       rl.question("Do you go to the bathroom or go to the kitchen? ", (answer) => {
         switch (answer.toLowerCase()) {
@@ -251,6 +260,7 @@ function leave() {
 
 
         function bathroom() {
+          console.clear()
           console.log("There is a sink and a toilet and a shower.");
           rl.question("Do you use the sink or toilet or shower? ", (answer) => {
             switch (answer.toLowerCase()) {
@@ -281,6 +291,7 @@ function leave() {
 
 
     function yogaMat() {
+      console.clear()
       console.log("there is a yoga mat.")
       rl.question("Do you do 5 minutes, supine yoga for 10 minutes, or 15 minutes? ", (answer) => {
         switch (answer.toLowerCase()) {

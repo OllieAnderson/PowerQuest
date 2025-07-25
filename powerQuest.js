@@ -1,5 +1,5 @@
 
-// const books = require('./modules/bookshelf/books.cjs');
+const books = require('./node_modules/books.cjs');
 
 
 
@@ -282,7 +282,7 @@ function leave() {
 
     function yogaMat() {
       console.log("there is a yoga mat.")
-      rl.question("Do you do 5 minutes or supine yoga for 10 minutes? ", (answer) => {
+      rl.question("Do you do 5 minutes, supine yoga for 10 minutes, or 15 minutes? ", (answer) => {
         switch (answer.toLowerCase()) {
           case "5":
             console.log("\nDo 5 minutes of yoga\n\n")
@@ -292,8 +292,8 @@ function leave() {
             console.log("\nDo 10 minutes of supine yoga\n\n")
             rl.question("continue? ", (answer) => {startGame()})
             break;
-          case "20":
-            console.log("\nDo 20 minutes of yoga\n\n")
+          case "15":
+            console.log("\nDo 15 minutes of yoga\n\n")
             rl.question("continue? ", (answer) => {startGame()})
             break;
           default:

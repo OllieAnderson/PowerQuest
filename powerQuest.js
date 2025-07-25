@@ -1,5 +1,5 @@
 
-const books = require('./modules/bookshelf/books.cjs');
+// const books = require('./modules/bookshelf/books.cjs');
 
 
 
@@ -66,8 +66,8 @@ function desk() {
 
 
     function computer() {
-      console.log("\nYou can use the computer to look at email or look at todo list.")
-      rl.question("\nUse the computer to? ", (answer) => {
+      // console.log("\nYou can use the computer to look at emaillook at todo list.")
+      rl.question("\nUse the computer to look at email, todolist, or google calendar? ", (answer) => {
         switch (answer.toLowerCase()) {
           case "email":
             console.log("\n Go look at emails\n\n");
@@ -79,15 +79,21 @@ function desk() {
             console.log("\n Go look at todolist\n\n")
             rl.question("continue? ", (answer) => {startGame()})
             break;
-          case "exit":
-            rl.close();
+
+          case "calendar":
+          case "google calendar":
+            console.log("\n Go look at google calendar\n\n")
+            rl.question("continue? ", (answer) => {startGame()})
             break;
-          case "back":
-            bed()
-            break
-          default:
-            console.log("Try again.");
-            computer();
+            case "exit":
+              rl.close();
+              break;
+            case "back":
+              desk()
+              break
+            default:
+              console.log("Try again.");
+              computer();
         }
       });
     }
